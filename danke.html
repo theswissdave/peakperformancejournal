@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Danke — Peak Performance Journal</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="img/cover.jpg">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@0,400;0,500;0,600&display=swap">
+<style>
+<style>
+/* Layout: a single narrow protocol column on a cold alpine ground; full-bleed photo bands break it at the hero, the author and the team block. */
+:root{
+  --paper:#eef1f3;
+  --surface:#ffffff;
+  --ink:#0e141a;
+  --muted:#5a6872;
+  --line:#d2d9dd;
+  --signal:#ff4d17;
+  --glacier:#1d5169;
+  --onsignal:#ffffff;
+  --shadow:0 1px 2px rgba(14,20,26,.06),0 8px 24px rgba(14,20,26,.06);
+
+  --display:'Archivo','Helvetica Neue',Arial,sans-serif;
+  --body:'IBM Plex Sans','Segoe UI',Helvetica,Arial,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#0c1116;
+    --surface:#141b22;
+    --ink:#e7edf1;
+    --muted:#95a3ad;
+    --line:#26323b;
+    --signal:#ff6336;
+    --glacier:#7fc0dd;
+    --onsignal:#10151a;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 28px rgba(0,0,0,.35);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0c1116;
+  --surface:#141b22;
+  --ink:#e7edf1;
+  --muted:#95a3ad;
+  --line:#26323b;
+  --signal:#ff6336;
+  --glacier:#7fc0dd;
+  --onsignal:#10151a;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 28px rgba(0,0,0,.35);
+  color-scheme:dark;
+}
+
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);
+  font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;
+  display:flex;align-items:center;justify-content:center;padding:28px 20px;
+}
+.box{max-width:30rem}
+.eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(1.9rem,6vw,2.8rem);line-height:1.05;
+   letter-spacing:-.02em;margin:14px 0 0;text-wrap:balance}
+p{margin:18px 0 0;color:var(--muted)}
+a.btn{
+  display:inline-flex;align-items:center;gap:10px;margin-top:28px;
+  font-family:var(--display);font-weight:600;font-size:.98rem;
+  padding:14px 22px;border-radius:2px;text-decoration:none;
+  background:var(--signal);color:var(--onsignal);
+}
+</style>
+</head>
+<body>
+<div class="box">
+  <div class="eyebrow">Angekommen</div>
+  <h1>Danke — ich melde mich.</h1>
+  <p>Deine Anfrage ist bei mir eingegangen. Du hörst innert zwei Arbeitstagen von mir. Bei etwas Dringendem: contact@davidhabluetzel.com</p>
+  <a class="btn" href="/">Zurück zur Seite</a>
+</div>
+</body>
+</html>

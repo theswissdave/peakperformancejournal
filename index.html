@@ -1,0 +1,922 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Das Peak Performance Journal — David Habluetzel</title>
+<meta name="description" content="Das Peak Performance Journal von David Habluetzel, 4× Olympionike: 262 Seiten, sechs Monate Struktur, vier Minuten pro Tag. Dein Kompass für Erfolg in Karriere, Sport und Leben.">
+<link rel="canonical" href="https://peakperformancejournal.ch/">
+<meta name="theme-color" content="#eef1f3">
+
+<meta property="og:type" content="book">
+<meta property="og:site_name" content="Peak Performance Journal">
+<meta property="og:title" content="Das Peak Performance Journal">
+<meta property="og:description" content="Sechs Monate Struktur für deine Ziele — von 4×-Olympionike David Habluetzel.">
+<meta property="og:url" content="https://peakperformancejournal.ch/">
+<meta property="og:image" content="https://peakperformancejournal.ch/img/cover.jpg">
+<meta property="og:locale" content="de_CH">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="img/cover.jpg">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<style>
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+/* Layout: a single narrow protocol column on a cold alpine ground; full-bleed photo bands break it at the hero, the author and the team block. */
+:root{
+  --paper:#eef1f3;
+  --surface:#ffffff;
+  --ink:#0e141a;
+  --muted:#5a6872;
+  --line:#d2d9dd;
+  --signal:#ff4d17;
+  --glacier:#1d5169;
+  --onsignal:#ffffff;
+  --shadow:0 1px 2px rgba(14,20,26,.06),0 8px 24px rgba(14,20,26,.06);
+
+  --display:'Archivo','Helvetica Neue',Arial,sans-serif;
+  --body:'IBM Plex Sans','Segoe UI',Helvetica,Arial,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#0c1116;
+    --surface:#141b22;
+    --ink:#e7edf1;
+    --muted:#95a3ad;
+    --line:#26323b;
+    --signal:#ff6336;
+    --glacier:#7fc0dd;
+    --onsignal:#10151a;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 28px rgba(0,0,0,.35);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0c1116;
+  --surface:#141b22;
+  --ink:#e7edf1;
+  --muted:#95a3ad;
+  --line:#26323b;
+  --signal:#ff6336;
+  --glacier:#7fc0dd;
+  --onsignal:#10151a;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 28px rgba(0,0,0,.35);
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--body);
+  font-size:17px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{color:inherit}
+
+.wrap{max-width:1120px;margin:0 auto;padding-inline:20px}
+.col{max-width:720px}
+.rule{height:1px;background:var(--line);border:0;margin:0}
+
+h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.02em;text-wrap:balance;margin:0}
+h1{font-size:clamp(2.1rem,6.4vw,4rem);line-height:1.02}
+h2{font-size:clamp(1.6rem,3.6vw,2.5rem);line-height:1.08}
+h3{font-size:1.08rem;font-weight:600;letter-spacing:-.01em;line-height:1.3}
+p{margin:0}
+
+.eyebrow{
+  font-family:var(--mono);font-size:.72rem;font-weight:500;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--muted);
+}
+.lead{font-size:clamp(1.05rem,2.1vw,1.22rem);color:var(--muted);line-height:1.55}
+.small{font-size:.9rem;color:var(--muted)}
+
+section{padding-block:clamp(52px,7vw,96px)}
+.stack{display:flex;flex-direction:column;gap:18px}
+.stack-lg{display:flex;flex-direction:column;gap:30px}
+
+/* ---------- top bar ---------- */
+.topbar{
+  position:sticky;top:env(safe-area-inset-top,0px);z-index:40;
+  background:color-mix(in srgb,var(--paper) 88%,transparent);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.topbar-in{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:11px}
+.brand{font-family:var(--mono);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.brand b{color:var(--ink);font-weight:500}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font-family:var(--display);font-weight:600;font-size:.98rem;letter-spacing:-.01em;
+  padding:14px 22px;border-radius:2px;text-decoration:none;border:1px solid transparent;
+  transition:transform .12s ease,background .12s ease,color .12s ease;
+}
+.btn:focus-visible{outline:2px solid var(--signal);outline-offset:3px}
+.btn-primary{background:var(--signal);color:var(--onsignal)}
+.btn-primary:hover{transform:translateY(-1px)}
+.btn-ghost{border-color:var(--line);color:var(--ink);background:transparent}
+.btn-ghost:hover{border-color:var(--ink)}
+.btn-sm{padding:9px 16px;font-size:.88rem}
+.btn-arrow{font-family:var(--mono);font-weight:400}
+
+/* ---------- hero ---------- */
+.hero{padding-block:clamp(40px,6vw,72px) 0}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:34px;align-items:center}
+@media (min-width:900px){.hero-grid{grid-template-columns:1.05fr .95fr;gap:56px}}
+.hero h1{margin-block:14px 0}
+.hero .lead{margin-top:18px;max-width:34ch}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+
+.facts{display:flex;flex-wrap:wrap;gap:0;margin-top:34px;border-top:1px solid var(--line)}
+.fact{flex:1 1 140px;min-width:0;padding:14px 16px 14px 0;border-right:1px solid var(--line)}
+.fact:last-child{border-right:0}
+.fact .n{font-family:var(--display);font-weight:800;font-size:1.45rem;line-height:1;font-variant-numeric:tabular-nums}
+.fact .l{font-family:var(--mono);font-size:.68rem;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);margin-top:7px;line-height:1.35}
+
+/* book cover */
+.cover-stage{position:relative;display:flex;justify-content:center;padding-block:8px}
+.cover{
+  width:min(340px,80vw);position:relative;
+  border-radius:0;overflow:hidden;
+  box-shadow:0 2px 4px rgba(0,0,0,.26),0 26px 60px rgba(7,18,26,.34);
+  transform:rotate(-1.6deg);
+}
+.cover img{display:block;width:100%;height:auto}
+.cover::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(90deg,rgba(0,0,0,.38) 0,rgba(0,0,0,.1) 11px,rgba(255,255,255,.2) 17px,rgba(255,255,255,0) 32px);
+}
+.cover-note{font-family:var(--mono);font-size:.64rem;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);text-align:center;margin-top:18px}
+
+/* ---------- band / photo ---------- */
+.band{position:relative;background:var(--surface)}
+.band img{width:100%;height:auto}
+.credit{
+  padding-block:14px 2px;font-size:1rem;line-height:1.5;color:var(--muted);max-width:62ch;
+}
+.credit b{font-family:var(--display);font-weight:600;color:var(--ink)}
+.band-cap{
+  font-family:var(--mono);font-size:.68rem;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--muted);padding-block:12px;
+}
+.photo-col{display:grid;grid-template-columns:1fr;gap:26px;align-items:center}
+@media (min-width:820px){.photo-col{grid-template-columns:.85fr 1.15fr;gap:48px}}
+.photo-col img{width:100%;height:auto;box-shadow:var(--shadow)}
+
+/* ---------- claims strip ---------- */
+.claims{background:var(--surface);border-block:1px solid var(--line)}
+.claims-in{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line)}
+@media (min-width:760px){.claims-in{grid-template-columns:repeat(3,1fr)}}
+.claim{
+  background:var(--surface);padding:30px 24px;display:flex;gap:16px;align-items:flex-start;min-width:0;
+}
+.claim i{
+  flex:0 0 auto;width:22px;height:2px;background:var(--signal);margin-top:11px;
+}
+.claim span{
+  font-family:var(--display);font-weight:600;font-size:1.06rem;line-height:1.25;
+  letter-spacing:-.015em;text-wrap:balance;
+}
+.claims-foot{
+  padding-block:26px 30px;max-width:56ch;color:var(--muted);font-size:1.02rem;line-height:1.5;
+}
+
+/* ---------- quote ---------- */
+.pull{
+  font-family:var(--display);font-weight:500;font-size:clamp(1.35rem,3vw,2rem);
+  line-height:1.25;letter-spacing:-.02em;text-wrap:balance;max-width:19ch;
+}
+.pull-attr{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:18px}
+
+/* ---------- grids ---------- */
+.g2{display:grid;grid-template-columns:1fr;gap:28px}
+@media (min-width:820px){.g2{grid-template-columns:1fr 1fr;gap:48px}}
+.g3{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+@media (min-width:620px){.g3{grid-template-columns:1fr 1fr}}
+@media (min-width:980px){.g3{grid-template-columns:repeat(3,1fr)}}
+.cell{background:var(--surface);padding:28px 24px 30px;min-width:0;display:flex;flex-direction:column;gap:10px}
+.cell svg{width:46px;height:46px;stroke:var(--ink);fill:none;stroke-width:1.5;
+  stroke-linecap:round;stroke-linejoin:round;margin-bottom:8px}
+.cell svg .hl{stroke:var(--signal);stroke-width:2}
+.cell p{font-size:.95rem;color:var(--muted)}
+
+/* ---------- numbered method ---------- */
+.steps{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.step{display:grid;grid-template-columns:auto 1fr;gap:16px 18px;padding-block:22px;border-bottom:1px solid var(--line);align-items:start}
+@media (min-width:760px){.step{grid-template-columns:76px 220px 1fr;gap:24px}}
+.step-n{font-family:var(--mono);font-size:.74rem;letter-spacing:.12em;color:var(--signal);padding-top:4px}
+.step h3{grid-column:2/-1}
+@media (min-width:760px){.step h3{grid-column:auto}}
+.step p{grid-column:2/-1;font-size:.95rem;color:var(--muted);min-width:0}
+@media (min-width:760px){.step p{grid-column:auto}}
+
+/* ---------- day page mock ---------- */
+.daypage{
+  background:var(--surface);border:1px solid var(--line);border-radius:2px;
+  padding:22px 22px 26px;box-shadow:var(--shadow);min-width:0;
+}
+.dp-head{
+  display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
+  font-family:var(--mono);font-size:.64rem;letter-spacing:.14em;color:var(--muted);
+  padding-bottom:14px;border-bottom:1px solid var(--line);
+}
+.dp-days{word-spacing:.35em}
+.dp-field{margin-top:20px}
+.dp-field span{
+  display:block;font-family:var(--mono);font-size:.62rem;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--signal);margin-bottom:11px;
+}
+.dp-field i{display:block;height:1px;background:var(--line);margin-bottom:15px}
+
+/* ---------- chapters ---------- */
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{
+  font-size:.86rem;padding:7px 13px;border:1px solid var(--line);border-radius:999px;
+  background:var(--surface);color:var(--ink);
+}
+.chip b{font-family:var(--mono);font-size:.7rem;color:var(--muted);font-weight:400;margin-right:7px}
+
+/* ---------- author ---------- */
+.author{display:grid;grid-template-columns:1fr;gap:30px;align-items:start}
+@media (min-width:860px){.author{grid-template-columns:300px 1fr;gap:52px}}
+.author img{border-radius:2px;box-shadow:var(--shadow)}
+.author p+p{margin-top:14px}
+.author-q{
+  margin:26px 0 0;padding-left:20px;border-left:2px solid var(--signal);
+  font-family:var(--display);font-weight:500;font-size:1.08rem;line-height:1.42;
+  letter-spacing:-.012em;
+}
+.sig{font-family:var(--display);font-weight:600;font-size:1.05rem;margin-top:22px}
+.sig span{display:block;font-family:var(--mono);font-weight:400;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+
+/* ---------- photo wall (Instagram-Raster) ---------- */
+.wall{background:var(--surface);border-block:1px solid var(--line)}
+.wall-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:3px}
+@media (min-width:620px){.wall-grid{grid-template-columns:repeat(3,1fr)}}
+@media (min-width:1000px){.wall-grid{grid-template-columns:repeat(4,1fr)}}
+.wall-grid figure{margin:0;min-width:0;background:var(--paper)}
+.wall-grid img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover}
+
+/* ---------- Stimmen ---------- */
+.voices{list-style:none;margin:6px 0 0;padding:0;border-top:1px solid var(--line)}
+.voices li{
+  padding-block:20px;border-bottom:1px solid var(--line);
+  font-family:var(--display);font-weight:500;font-size:clamp(1.02rem,2.2vw,1.2rem);
+  line-height:1.4;letter-spacing:-.012em;text-wrap:pretty;position:relative;padding-left:26px;
+}
+.voices li::before{
+  content:"";position:absolute;left:0;top:30px;width:14px;height:2px;background:var(--signal);
+}
+
+/* ---------- teams ---------- */
+.teams{background:var(--ink);color:var(--paper)}
+.teams .eyebrow,.teams .small,.teams p{color:#9bacb8}
+.teams h2{color:#fff}
+.teams .box{display:grid;grid-template-columns:1fr;gap:30px;align-items:center}
+@media (min-width:900px){.teams .box{grid-template-columns:1fr 1fr;gap:52px}}
+.teams img{border-radius:2px}
+.tlist{display:flex;flex-direction:column;gap:0;margin-top:8px;border-top:1px solid rgba(255,255,255,.14)}
+.tlist div{padding-block:13px;border-bottom:1px solid rgba(255,255,255,.14);font-size:.95rem;color:#cdd8df}
+.tlist div b{color:#fff;font-weight:600}
+.tlist.light{border-top-color:var(--line)}
+.tlist.light div{border-bottom-color:var(--line);color:var(--muted)}
+.tlist.light div b{color:var(--ink)}
+.mailbox{
+  font-family:var(--mono);font-size:.9rem;background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.16);padding:12px 14px;border-radius:2px;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;color:#fff;
+  word-break:break-all;
+}
+.copy{
+  font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;
+  background:transparent;border:1px solid rgba(255,255,255,.3);color:#fff;
+  padding:7px 12px;border-radius:2px;cursor:pointer;
+}
+.copy:hover{border-color:#fff}
+
+/* ---------- faq ---------- */
+details{border-bottom:1px solid var(--line);padding-block:16px}
+details:first-of-type{border-top:1px solid var(--line)}
+summary{
+  cursor:pointer;list-style:none;font-family:var(--display);font-weight:600;
+  font-size:1.02rem;display:flex;justify-content:space-between;gap:16px;align-items:baseline;
+}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--mono);color:var(--signal);font-size:1.1rem}
+details[open] summary::after{content:"–"}
+details p{margin-top:12px;font-size:.95rem;color:var(--muted);max-width:62ch}
+
+/* ---------- final cta ---------- */
+.final{background:var(--surface);border-block:1px solid var(--line)}
+.final-in{display:flex;flex-direction:column;gap:22px;align-items:flex-start}
+
+footer{padding-block:34px 44px}
+.foot{display:flex;flex-wrap:wrap;gap:14px 28px;justify-content:space-between;align-items:baseline}
+.foot a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line)}
+.foot a:hover{color:var(--ink)}
+
+/* ---------- contact form ---------- */
+.form-sec{background:var(--surface);border-block:1px solid var(--line)}
+.form-grid{display:grid;grid-template-columns:1fr;gap:34px}
+@media (min-width:860px){.form-grid{grid-template-columns:.9fr 1.1fr;gap:56px}}
+form.anfrage{display:flex;flex-direction:column;gap:16px;min-width:0}
+.fld{display:flex;flex-direction:column;gap:7px;min-width:0}
+.fld label{
+  font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);
+}
+.fld label em{font-style:normal;color:var(--signal)}
+.fld input,.fld textarea{
+  font-family:var(--body);font-size:1rem;color:var(--ink);background:var(--paper);
+  border:1px solid var(--line);border-radius:2px;padding:12px 13px;width:100%;
+}
+.fld textarea{resize:vertical;min-height:110px;line-height:1.5}
+.fld input:focus,.fld textarea:focus{outline:2px solid var(--signal);outline-offset:1px;border-color:transparent}
+.fld input:invalid:not(:placeholder-shown){border-color:var(--signal)}
+.row2{display:grid;grid-template-columns:1fr;gap:16px}
+@media (min-width:560px){.row2{grid-template-columns:1.6fr 1fr}}
+.form-note{font-size:.84rem;color:var(--muted);line-height:1.5}
+.form-msg{
+  font-size:.95rem;line-height:1.55;padding:14px 16px;border-radius:2px;
+  border:1px solid var(--line);background:var(--paper);
+}
+.form-msg b{display:block;font-family:var(--display);font-size:1rem;margin-bottom:5px}
+.mail-inline{
+  font-family:var(--mono);font-size:.92rem;word-break:break-all;color:var(--ink);
+}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<div class="topbar">
+  <div class="wrap topbar-in">
+    <div class="brand"><b>Peak Performance Journal</b> — David Habluetzel</div>
+    <a class="btn btn-primary btn-sm" href="https://www.amazon.de/dp/B0DT6C8W8B" target="_blank" rel="noopener">Auf Amazon bestellen</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">6 Monate · 4 Minuten pro Tag · Taschenbuch</div>
+      <h1>Entfalte dein Peak Potenzial.</h1>
+      <p class="lead">Das Journal, das ich als Profisportler für mich selbst gebaut habe — damit Ziele nicht im Kopf bleiben, sondern auf Papier stehen und erreicht werden. Dein Kompass für Karriere, Sport und Leben.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://www.amazon.de/dp/B0DT6C8W8B" target="_blank" rel="noopener">Jetzt auf Amazon bestellen <span class="btn-arrow">→</span></a>
+        <a class="btn btn-ghost" href="#teams">Für mein Team</a>
+      </div>
+      <div class="facts">
+        <div class="fact"><div class="n">4×</div><div class="l">Olympische Spiele</div></div>
+        <div class="fact"><div class="n">262</div><div class="l">Seiten</div></div>
+        <div class="fact"><div class="n">6</div><div class="l">Monate Struktur</div></div>
+        <div class="fact"><div class="n">4 Min</div><div class="l">pro Tag</div></div>
+      </div>
+    </div>
+
+    <div class="cover-stage">
+      <div>
+        <div class="cover">
+          <img src="img/cover.jpg" alt="Buchcover: Das Peak Performance Journal von David Habluetzel">
+        </div>
+        <div class="cover-note">Taschenbuch · erhältlich auf Amazon.de</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BAND -->
+<div class="band">
+  <img src="img/hero-halfpipe.jpg" alt="David Habluetzel in der Halfpipe bei den Laax Open">
+</div>
+<div class="wrap"><div class="band-cap">Laax Open — Halfpipe. Dort ist dieses Journal entstanden.</div></div>
+
+<!-- CLAIMS -->
+<section style="padding-bottom:0">
+  <div class="wrap col stack" style="margin-bottom:30px">
+    <div class="eyebrow">Dein persönlicher Begleiter</div>
+    <h2>Sechs Monate, in denen du deine Ziele nicht aus den Augen verlierst.</h2>
+  </div>
+</section>
+<div class="claims">
+  <div class="wrap claims-in" style="padding-inline:0">
+    <div class="claim"><i></i><span>Überwinde deine Limits.</span></div>
+    <div class="claim"><i></i><span>Erreiche mehr mit weniger Stress.</span></div>
+    <div class="claim"><i></i><span>Entdecke dein volles Potenzial.</span></div>
+  </div>
+  <div class="wrap"><p class="claims-foot">Am Ende der sechs Monate weisst du schwarz auf weiss, was du erreicht hast — und was dich dorthin gebracht hat.</p></div>
+</div>
+
+<!-- PROBLEM -->
+<section>
+  <div class="wrap col stack">
+    <div class="eyebrow">Warum es dieses Journal gibt</div>
+    <h2>Ziele hast du genug. Was fehlt, ist die Struktur.</h2>
+    <p class="lead">Ideen kommen schnell. Drei Wochen später sind sie weg — nicht wegen fehlender Disziplin, sondern weil kein System dahintersteht.</p>
+    <p>Dieses Journal ist kein Buch zum Durchlesen, sondern ein Werkzeug zum Füllen. Was dort steht, kannst du messen.</p>
+  </div>
+</section>
+
+<div class="band">
+  <img src="img/speaker.jpg" alt="David Habluetzel auf der Bühne bei einem Vortrag über Resilienz" loading="lazy">
+</div>
+<div class="wrap">
+  <p class="credit"><b>Der Autor:</b> David Habluetzel — 4× Olympionike, Profi-Snowboarder und Motivationsspeaker.</p>
+</div>
+
+<hr class="rule">
+
+<!-- PULLQUOTE -->
+<section>
+  <div class="wrap g2">
+    <div>
+      <p class="pull">«Wenn ich mir meine Ziele notiere, erreiche ich sie eher.»</p>
+      <div class="pull-attr">David Habluetzel</div>
+    </div>
+    <div class="stack">
+      <p>Jordan dokumentierte jede Saison. Serena Williams führte ein Notizbuch voller Matchstrategien. Phelps schrieb die Zeiten auf, die er schwimmen wollte. Keiner von ihnen hat es dem Zufall überlassen.</p>
+      <p class="small">Vier Minuten am Tag. Über sechs Monate rund zwölf Stunden — verglichen mit deiner Bildschirmzeit.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- NUTZEN -->
+<section>
+  <div class="wrap stack-lg">
+    <div class="col stack">
+      <div class="eyebrow">Was drin steckt</div>
+      <h2>Sechs Werkzeuge aus dem Spitzensport — übersetzt auf deinen Alltag.</h2>
+    </div>
+    <div class="g3">
+      <div class="cell">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M4 42h40"/><path d="M10 42V30"/><path d="M20 42V22"/><path d="M30 42V14"/><path class="hl" d="M40 42V6"/><path class="hl" d="M36 10l4-4 4 4"/></svg>
+        <h3>Das Zielsystem</h3>
+        <p>Fünf Ebenen — von der 3-Jahres-Vision bis zum heutigen Tag, getrennt für beruflich und persönlich.</p>
+      </div>
+      <div class="cell">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="18"/><circle cx="24" cy="24" r="11"/><circle class="hl" cx="24" cy="24" r="4"/><path class="hl" d="M24 24l14-14"/></svg>
+        <h3>SMART-Ziele</h3>
+        <p>Spezifisch, messbar, erreichbar, relevant, zeitgebunden. Aus «besser werden» wird etwas Messbares.</p>
+      </div>
+      <div class="cell">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M3 24s8-12 21-12 21 12 21 12-8 12-21 12S3 24 3 24z"/><circle class="hl" cx="24" cy="24" r="6"/></svg>
+        <h3>Visualisierung</h3>
+        <p>Den grossen Moment im Kopf proben, bevor er kommt — Wettkampf, Präsentation, schwieriges Gespräch.</p>
+      </div>
+      <div class="cell">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 30c6 0 6-12 12-12s6 12 12 12 6-12 12-12"/><path class="hl" d="M6 40c6 0 6-8 12-8s6 8 12 8 6-8 12-8"/><circle cx="24" cy="9" r="3"/></svg>
+        <h3>Achtsamkeit &amp; Regeneration</h3>
+        <p>Atmung, Muskelentspannung, Schlaf, aktive Erholung. Leistung entsteht in der Pause.</p>
+      </div>
+      <div class="cell">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path class="hl" d="M24 41S7 30 7 18.5A8.5 8.5 0 0124 13a8.5 8.5 0 0117 5.5C41 30 24 41 24 41z"/><path d="M24 13v28"/></svg>
+        <h3>Dankbarkeit</h3>
+        <p>Der tägliche Blick auf das, was läuft. Verändert, wie du Rückschläge einordnest.</p>
+      </div>
+      <div class="cell">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="18"/><path class="hl" d="M31 17l-4 10-10 4 4-10z"/><circle class="hl" cx="24" cy="24" r="1.5"/></svg>
+        <h3>Dein Vermächtnis</h3>
+        <p>Dein «Warum» festhalten — der Kompass, wenn Motivation gerade nicht reicht.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- METHODE -->
+<section>
+  <div class="wrap stack-lg">
+    <div class="col stack">
+      <div class="eyebrow">So funktioniert's</div>
+      <h2>Vom Jahresziel bis zum heutigen Morgen.</h2>
+      <p class="lead">Fünf Ebenen, die aufeinander aufbauen — jede zweimal: beruflich und persönlich.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-n">1 – 3 JAHRE</div>
+        <h3>Langfristige Ziele</h3>
+        <p>Deine Vision, zerlegt in Schritte — plus dein tieferes «Warum».</p>
+      </div>
+      <div class="step">
+        <div class="step-n">6 – 12 MONATE</div>
+        <h3>Mittelfristige Ziele</h3>
+        <p>Die grossen Meilensteine und die Routinen, die dich dorthin bringen.</p>
+      </div>
+      <div class="step">
+        <div class="step-n">1 – 3 MONATE</div>
+        <h3>Kurzfristige Ziele</h3>
+        <p>Welche Fähigkeit stärkst du jetzt — und wie misst du den Fortschritt?</p>
+      </div>
+      <div class="step">
+        <div class="step-n">JEDE WOCHE</div>
+        <h3>Wochenziele &amp; Reflexion</h3>
+        <p>Erfolge, Hürden, Erkenntnisse. Hier entsteht Selbstkenntnis.</p>
+      </div>
+      <div class="step">
+        <div class="step-n">JEDEN TAG</div>
+        <h3>Tageseinträge</h3>
+        <p>Vier Minuten. Nach ein paar Wochen erkennst du Muster.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- TAGESSEITE -->
+<section>
+  <div class="wrap g2">
+    <div class="stack">
+      <div class="eyebrow">Eine Tagesseite</div>
+      <h2>Vier Felder. Vier Minuten.</h2>
+      <p>So sieht eine der rund 180 Tagesseiten aus. Auf jeder Seite ein Zitat — von Einstein bis Muhammad Ali.</p>
+      <p class="small">Alle sieben Tage folgt eine Wochenseite für die Reflexion.</p>
+    </div>
+    <div class="daypage">
+      <div class="dp-head">
+        <span class="dp-days">MO DI MI DO FR SA SO</span>
+        <span class="dp-date">DATUM</span>
+      </div>
+      <div class="dp-field"><span>Meine 3 wichtigsten Prioritäten</span><i></i><i></i><i></i></div>
+      <div class="dp-field"><span>Andere Aufgaben und To-do's</span><i></i><i></i></div>
+      <div class="dp-field"><span>Dankbarkeitsliste — 3 positive Dinge von heute</span><i></i><i></i><i></i></div>
+      <div class="dp-field"><span>Welche Lektionen habe ich heute gelernt?</span><i></i><i></i></div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- KAPITEL -->
+<section>
+  <div class="wrap col stack">
+    <div class="eyebrow">Inhalt</div>
+    <h2>Theorie vorne, sechs Monate Seiten hinten.</h2>
+    <p>Rund 50 Seiten Werkzeuge. Der ganze Rest ist dein Arbeitsbereich.</p>
+    <div class="chips" style="margin-top:8px">
+      <span class="chip"><b>01</b>Willkommen in deinem Journal</span>
+      <span class="chip"><b>02</b>Dein Potenzial freisetzen</span>
+      <span class="chip"><b>03</b>Mein Weg, mein Journaling</span>
+      <span class="chip"><b>04</b>Kleine Schritte, grosse Wirkung</span>
+      <span class="chip"><b>05</b>Aufbau dieses Journals</span>
+      <span class="chip"><b>06</b>SMART-Ziele</span>
+      <span class="chip"><b>07</b>Dranbleiben!</span>
+      <span class="chip"><b>08</b>Die Macht der Visualisierung</span>
+      <span class="chip"><b>09</b>Die Kunst des Lernens</span>
+      <span class="chip"><b>10</b>Yin &amp; Yang: Anstrengung und Erholung</span>
+      <span class="chip"><b>11</b>Dein persönliches Erbe aufbauen</span>
+      <span class="chip"><b>12</b>Das Gesetz der Anziehung</span>
+      <span class="chip"><b>13</b>Der Autor</span>
+      <span class="chip"><b>14</b>Langfristige Ziele</span>
+      <span class="chip"><b>15</b>Wochenziele, tägliche Notizen</span>
+      <span class="chip"><b>16</b>Zurückblicken und weitermachen</span>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- AUTOR -->
+<section>
+  <div class="wrap">
+    <div class="author">
+      <img src="img/david-portrait.jpg" alt="David Habluetzel">
+      <div>
+        <div class="eyebrow">Der Autor</div>
+        <h2 style="margin-top:12px">David Habluetzel</h2>
+        <p style="margin-top:18px">Mit 17 an meinen ersten Olympischen Spielen in Sotschi: Fünfter in der Halfpipe, direkt hinter Shaun White. Danach sechs Knieoperationen, vier Kreuzbandrisse und eine Hirnblutung, die meine Karriere fast beendet hätte. Die Ärzte rieten mir aufzuhören.</p>
+        <p>Zurückgebracht hat mich kein härterer Trainingsplan, sondern ein Notizbuch. 2024 kam ich als bester Europäer der Halfpipe-Weltcupwertung zurück — und baute im selben Winter aus zehn Jahren Notizen dieses Journal.</p>
+        <blockquote class="author-q">«Als Freestyle-Profi-Snowboarder war es eines meiner Ziele, dieses Journal zu entwickeln — und es hat meine persönliche Reise entscheidend verändert. Ich freue mich darauf, dich damit auf deinem Weg zu begleiten.»</blockquote>
+        <div class="sig">Swissdave<span>David Habluetzel · Zürich &amp; Laax</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap photo-col">
+    <img src="img/podium.jpg" alt="David Habluetzel auf dem Podium beim Weltcup in Calgary, Januar 2026">
+    <div class="stack">
+      <div class="eyebrow">Weltcup Calgary · Januar 2026</div>
+      <p class="pull" style="max-width:22ch">Jedes dieser Ziele stand zuerst auf Papier.</p>
+      <p style="margin-top:20px">2. Platz — mein grösster Erfolg seit dem Comeback. Davor Monate, in denen ich jeden Morgen aufgeschrieben habe, woran ich an diesem Tag arbeite. Kein Geheimnis, keine Abkürzung. Nur jeden Tag das Ziel vor Augen, bis es so weit war.</p>
+    </div>
+  </div>
+</section>
+<hr class="rule">
+
+<!-- WALL -->
+<section style="padding-bottom:0">
+  <div class="wrap col stack" style="margin-bottom:28px">
+    <div class="eyebrow">Unterwegs</div>
+    <h2>Das Journal ist längst nicht mehr nur meins.</h2>
+  </div>
+</section>
+<div class="wall">
+  <div class="wrap wall-grid" style="padding-inline:0">
+      <figure><img src="img/wall/w01.jpg" alt="Leserinnen und Leser mit dem Peak Performance Journal" loading="lazy" width="760" height="760"></figure>
+      <figure><img src="img/wall/w02.jpg" alt="Leserinnen und Leser mit dem Peak Performance Journal" loading="lazy" width="760" height="760"></figure>
+      <figure><img src="img/wall/w03.jpg" alt="Leserinnen und Leser mit dem Peak Performance Journal" loading="lazy" width="760" height="760"></figure>
+      <figure><img src="img/wall/w04.jpg" alt="Leserinnen und Leser mit dem Peak Performance Journal" loading="lazy" width="760" height="760"></figure>
+      <figure><img src="img/wall/w05.jpg" alt="Leserinnen und Leser mit dem Peak Performance Journal" loading="lazy" width="760" height="760"></figure>
+      <figure><img src="img/wall/w06.jpg" alt="Leserinnen und Leser mit dem Peak Performance Journal" loading="lazy" width="760" height="760"></figure>
+      <figure><img src="img/wall/w07.jpg" alt="Leserinnen und Leser mit dem Peak Performance Journal" loading="lazy" width="760" height="760"></figure>
+      <figure><img src="img/wall/w08.jpg" alt="Leserinnen und Leser mit dem Peak Performance Journal" loading="lazy" width="760" height="760"></figure>
+      <figure><img src="img/wall/w09.jpg" alt="Leserinnen und Leser mit dem Peak Performance Journal" loading="lazy" width="760" height="760"></figure>
+      <figure><img src="img/wall/w10.jpg" alt="Leserinnen und Leser mit dem Peak Performance Journal" loading="lazy" width="760" height="760"></figure>
+      <figure><img src="img/wall/w11.jpg" alt="Leserinnen und Leser mit dem Peak Performance Journal" loading="lazy" width="760" height="760"></figure>
+      <figure><img src="img/wall/w12.jpg" alt="Leserinnen und Leser mit dem Peak Performance Journal" loading="lazy" width="760" height="760"></figure>
+  </div>
+</div>
+
+<!-- STIMMEN -->
+<section>
+  <div class="wrap col stack">
+    <div class="eyebrow">Was Leserinnen und Leser schreiben</div>
+    <ul class="voices">
+      <li>Die Struktur hilft mir, grosse Ziele in kleine Schritte aufzuteilen. Seitdem komme ich nicht nur schneller voran, sondern auch nachhaltiger.</li>
+      <li>Durch die klaren Anleitungen habe ich endlich gelernt, mich mental auf Wettkämpfe vorzubereiten.</li>
+      <li>Ich bin keine Athletin, sondern arbeite im Büro — aber endlich plane ich meine Aufgaben realistisch und sehe am Ende der Woche Erfolge.</li>
+      <li>Das Kapitel über Reflexion hat mir geholfen, meine Fortschritte bewusster wahrzunehmen und dankbarer zu sein.</li>
+      <li>Anstatt mich von grossen Projekten einschüchtern zu lassen, schaffe ich jeden Tag kleine Schritte, die sich summieren.</li>
+      <li>Besonders der Teil über Erfolge feiern hat inspiriert, kleine Siege mehr zu würdigen.</li>
+      <li>Mentale Stärke aufbauen — das hat mir geholfen, mit Rückschlägen besser umzugehen.</li>
+      <li>Es fühlt sich an, als hätte ich einen Mentor an meiner Seite.</li>
+      <li>Ich habe lange nicht mehr an meine eigenen Wünsche gedacht. Dieses Buch hat mir gezeigt, wie wichtig es ist, sich Zeit für sich selbst zu nehmen.</li>
+      <li>Seitdem ich diese Methode anwende, habe ich so viele Fortschritte gemacht.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- TEAMS -->
+<section class="teams" id="teams">
+  <div class="wrap box">
+    <div>
+      <div class="eyebrow">Für Teams, Klassen und Jahrgänge</div>
+      <h2 style="margin-top:12px">Ein Journal für alle — damit euer Workshop nicht nach zwei Wochen verpufft.</h2>
+      <p style="margin-top:18px">Ein Tag Input gibt den Anstoss, das Journal trägt ihn über Monate. Zusammen wird aus einem Event ein Prozess: Alle bekommen dasselbe Werkzeug und eine gemeinsame Sprache für Ziele und Fortschritt.</p>
+      <div class="tlist">
+        <div><b>Lernende &amp; Graduate-Programme</b> — Struktur über den ganzen Jahrgang.</div>
+        <div><b>Führungs- und Vertriebsteams</b> — Quartalsziele, wöchentlich sichtbar.</div>
+        <div><b>Sportvereine &amp; Nachwuchskader</b> — Training, Regeneration, Wettkampf an einem Ort.</div>
+        <div><b>Schulen &amp; Hochschulen</b> — Lernziele und Selbstorganisation.</div>
+      </div>
+      <p class="small" style="margin-top:22px">Sammelbestellungen ab 10 Exemplaren, auf Wunsch mit eurem Logo.</p>
+      <div class="mailbox" style="margin-top:14px">
+        <span id="mail">contact@davidhabluetzel.com</span>
+        <button class="copy" id="copybtn" type="button">Adresse kopieren</button>
+      </div>
+    </div>
+    <div>
+      <img src="img/team-workshop.jpg" alt="David Habluetzel in einem High-Performance-Workshop mit einem Team">
+    </div>
+  </div>
+</section>
+
+<!-- LIVE INPUT -->
+<section>
+  <div class="wrap photo-col">
+    <img src="img/diplomfeier.jpg" alt="David Habluetzel bei einem Referat an der HSO Zürich">
+    <div class="stack">
+      <div class="eyebrow">Journal + Live-Input</div>
+      <h2>Zur Bestellung gibt's mich dazu.</h2>
+      <p>Ihr könnt das Journal mit einem Live-Input von mir kombinieren — als Auftakt, damit alle gleich am ersten Tag loslegen, oder später im Jahr als Zwischenstopp.</p>
+      <div class="tlist light">
+        <div><b>Keynote</b> — 30 bis 60 Minuten über Rückschläge, Comebacks und Zielarbeit im Spitzensport.</div>
+        <div><b>Workshop</b> — halber Tag, in dem jede Person ihre ersten Seiten füllt und mit eigenen Zielen rausgeht.</div>
+        <div><b>Online-Impuls</b> — kurze Session remote, auch als Follow-up nach drei Monaten.</div>
+      </div>
+      <p class="small">Vor Ort in der ganzen DACH-Region oder online. Anfrage an contact@davidhabluetzel.com.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="wrap col stack">
+    <div class="eyebrow">Häufige Fragen</div>
+    <h2 style="margin-bottom:10px">Kurz beantwortet.</h2>
+    <div>
+      <details open>
+        <summary>Muss ich Sportlerin oder Sportler sein?</summary>
+        <p>Nein. Die Werkzeuge kommen aus dem Spitzensport, funktionieren aber genauso im Büro oder im Studium.</p>
+      </details>
+      <details>
+        <summary>Wie viel Zeit kostet mich das pro Tag?</summary>
+        <p>Vier Minuten täglich, einmal pro Woche etwas mehr. Über sechs Monate rund zwölf Stunden.</p>
+      </details>
+      <details>
+        <summary>Was passiert, wenn ich ein paar Tage auslasse?</summary>
+        <p>Nichts. Die Daten trägst du selbst ein — du steigst da wieder ein, wo du aufgehört hast.</p>
+      </details>
+      <details>
+        <summary>Gibt es das auch digital?</summary>
+        <p>Bewusst nur als Taschenbuch zum Handschreiben. Die Theorie gibt es zusätzlich als Kindle-Ausgabe: «Peak Performance Playbook».</p>
+      </details>
+      <details>
+        <summary>Wie bestelle ich grössere Mengen?</summary>
+        <p>Einzelexemplare über Amazon.de. Für Sammelbestellungen, Firmenlogo oder Journal plus Live-Input: contact@davidhabluetzel.com.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<div class="band">
+  <img src="img/book-zurich.jpg" alt="Das Peak Performance Journal, gehalten über der Skyline von Zürich" loading="lazy">
+</div>
+<div class="wrap"><div class="band-cap">Zürich. Das Journal geht mit, wohin du gehst.</div></div>
+
+<!-- FINAL CTA -->
+<div class="final">
+  <div class="wrap" style="padding-block:clamp(48px,6vw,80px)">
+    <div class="final-in col">
+      <div class="eyebrow">Die nächsten sechs Monate laufen sowieso</div>
+      <h2>Du entscheidest nur, ob du am Ende weisst, was passiert ist.</h2>
+      <p class="lead">Taschenbuch, versandfertig auf Amazon.de. Fang morgen früh an.</p>
+      <div class="cta-row" style="margin-top:6px">
+        <a class="btn btn-primary" href="https://www.amazon.de/dp/B0DT6C8W8B" target="_blank" rel="noopener">Jetzt auf Amazon bestellen <span class="btn-arrow">→</span></a>
+        <a class="btn btn-ghost" href="#kontakt">Anfrage für Teams</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- KONTAKTFORMULAR -->
+<div class="form-sec" id="kontakt">
+  <div class="wrap" style="padding-block:clamp(48px,6vw,80px)">
+    <div class="form-grid">
+      <div class="stack">
+        <div class="eyebrow">Direkt anfragen</div>
+        <h2>Schreib mir.</h2>
+        <p class="form-note">Für Sammelbestellungen, Firmenlogo auf dem Journal oder eine Kombination aus Journal und Live-Input. Ich melde mich innert zwei Arbeitstagen.</p>
+        <p class="mail-inline" style="margin-top:6px">contact@davidhabluetzel.com</p>
+      </div>
+
+      <form class="anfrage" id="anfrage" name="anfrage" method="POST"
+            data-netlify="true" netlify-honeypot="website-feld" action="/danke.html">
+          <input type="hidden" name="form-name" value="anfrage">
+          <p hidden><label>Bitte leer lassen: <input name="website-feld"></label></p>
+        <div class="fld">
+          <label for="f-name">Name <em>*</em></label>
+          <input id="f-name" name="name" type="text" autocomplete="name" placeholder="Vor- und Nachname" required>
+        </div>
+        <div class="fld">
+          <label for="f-mail">E-Mail <em>*</em></label>
+          <input id="f-mail" name="email" type="email" autocomplete="email" placeholder="name@firma.ch" required>
+        </div>
+        <div class="row2">
+          <div class="fld">
+            <label for="f-org">Firma oder Team</label>
+            <input id="f-org" name="org" type="text" autocomplete="organization" placeholder="optional">
+          </div>
+          <div class="fld">
+            <label for="f-anz">Anzahl Exemplare</label>
+            <input id="f-anz" name="anzahl" type="number" min="1" step="1" inputmode="numeric" placeholder="z.B. 50">
+          </div>
+        </div>
+        <div class="fld">
+          <label for="f-msg">Nachricht</label>
+          <textarea id="f-msg" name="message" placeholder="Worum geht's? Live-Input gewünscht?"></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit" id="f-send" style="align-self:flex-start">Anfrage senden <span class="btn-arrow">→</span></button>
+        <div class="form-msg" id="f-out" hidden></div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap foot">
+    <div class="small">© 2026 David Habluetzel · Via Principala 29a, 7031 Laax</div>
+    <div class="small">contact@davidhabluetzel.com · <a href="https://www.davidhabluetzel.ch" target="_blank" rel="noopener">davidhabluetzel.ch</a> · <a href="https://www.amazon.de/dp/B0DT6C8W8B" target="_blank" rel="noopener">Amazon.de</a></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var MAIL = 'contact@davidhabluetzel.com';
+  var form = document.getElementById('anfrage');
+  var out  = document.getElementById('f-out');
+  var send = document.getElementById('f-send');
+  if(!form) return;
+
+  function show(html){ out.innerHTML = html; out.hidden = false; }
+  function esc(t){ var d = document.createElement('div'); d.textContent = t; return d.innerHTML; }
+  function v(n){ var el = form.elements[n]; return el ? el.value.trim() : ''; }
+
+  function reset(){
+    send.disabled = false;
+    send.innerHTML = 'Anfrage senden <span class="btn-arrow">\u2192</span>';
+  }
+
+  // Wenn der Netlify-Versand nicht zur Verfügung steht (z.B. Vorschau),
+  // bekommt der Besucher eine fertig ausgefüllte Mail statt einer Fehlermeldung.
+  function mailFallback(d){
+    var text = 'Name: ' + d.name + '\n'
+             + 'E-Mail: ' + d.email + '\n'
+             + (d.org ? 'Firma: ' + d.org + '\n' : '')
+             + (d.anzahl ? 'Anzahl Exemplare: ' + d.anzahl + '\n' : '')
+             + (d.message ? '\n' + d.message + '\n' : '');
+    var href = 'mailto:' + MAIL
+             + '?subject=' + encodeURIComponent('Anfrage Peak Performance Journal \u2014 ' + d.name)
+             + '&body=' + encodeURIComponent(text);
+
+    show('<b>Fast geschafft, ' + esc(d.name) + '.</b>Ein Klick fehlt noch \u2014 öffne die fertige Mail und schick sie ab.'
+      + '<div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:14px">'
+      + '<a class="btn btn-primary btn-sm" href="' + href + '">Mail öffnen</a>'
+      + '<button class="btn btn-ghost btn-sm" type="button" id="f-copy">Text kopieren</button>'
+      + '</div>');
+
+    var cp = document.getElementById('f-copy');
+    if(cp) cp.addEventListener('click', function(){
+      var full = 'An: ' + MAIL + '\n\n' + text;
+      function done(){ cp.textContent = 'Kopiert'; }
+      function fail(){ cp.textContent = MAIL; }
+      try {
+        if(navigator.clipboard && navigator.clipboard.writeText){
+          navigator.clipboard.writeText(full).then(done, fail);
+        } else { fail(); }
+      } catch(e){ fail(); }
+    });
+  }
+
+  form.addEventListener('submit', function(e){
+    var d = { name: v('name'), email: v('email'), org: v('org'),
+              anzahl: v('anzahl'), message: v('message') };
+
+    if(!d.name || !d.email || d.email.indexOf('@') < 1){
+      e.preventDefault();
+      show('<b>Fast.</b>Name und eine gültige E-Mail-Adresse brauche ich noch.');
+      return;
+    }
+
+    if(!window.fetch || !window.FormData || !window.URLSearchParams) return;
+
+    e.preventDefault();
+    send.disabled = true;
+    send.textContent = 'Wird gesendet \u2026';
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(new FormData(form)).toString()
+    }).then(function(r){
+      if(!r.ok) throw new Error(r.status);
+      form.reset();
+      show('<b>Danke, ' + esc(d.name) + '.</b>Deine Anfrage ist angekommen. Ich melde mich innert zwei Arbeitstagen.');
+      reset();
+    }).catch(function(){
+      mailFallback(d);
+      reset();
+    });
+  });
+})();
+</script>
+
+<script>
+(function(){
+  var btn = document.getElementById('copybtn');
+  var mail = document.getElementById('mail');
+  if(!btn || !mail) return;
+  btn.addEventListener('click', function(){
+    var text = mail.textContent.trim();
+    var done = function(){ btn.textContent = 'Kopiert'; setTimeout(function(){ btn.textContent = 'Adresse kopieren'; }, 1800); };
+    try{
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(done).catch(select);
+      } else { select(); }
+    }catch(e){ select(); }
+    function select(){
+      try{
+        var r = document.createRange();
+        r.selectNodeContents(mail);
+        var s = window.getSelection();
+        s.removeAllRanges(); s.addRange(r);
+        btn.textContent = 'Markiert — kopieren';
+        setTimeout(function(){ btn.textContent = 'Adresse kopieren'; }, 2400);
+      }catch(e){}
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
